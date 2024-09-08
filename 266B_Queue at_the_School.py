@@ -5,10 +5,15 @@ time = user_input1[1]
 line_sequence = list(input())
 
 for t in range(time):
-    for i in range(student_number-1, 0, -2):
+    i = 0
+    while i<student_number-1:
+
         if line_sequence[i] == 'B' and line_sequence[i+1]=='G':
             line_sequence[i] = 'G'
             line_sequence[i+1] = 'B'
+            i+=2
+        else:
+            i+=1
 
 output = "".join(line_sequence)
 print(output)
